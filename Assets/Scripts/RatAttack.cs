@@ -53,7 +53,6 @@ public class MouseAttack : MonoBehaviour
 
         // Encontrar el monstruo más cercano
         float closestDistance = attackDistance;
-        target = null; // Reiniciar el objetivo
         foreach (GameObject monster in monsters)
         {
             float distance = Vector3.Distance(transform.position, monster.transform.position);
@@ -73,15 +72,11 @@ public class MouseAttack : MonoBehaviour
 
     void MoveTowardsTarget()
     {
-        if (target == null) // Si no hay objetivo, regresar
-        {
-            currentState = State.Returning; 
-            return; // Salir de la función
-        }
+        if (target == null) return; // Si no hay objetivo, salir
 
         // Mover el ratón hacia el monstruo, restringiendo el movimiento al eje X
-        Vector2 direction = new Vector2(target.transform.position.x - transform.position.x, 0).normalized;
-        rb.velocity = new Vector2(direction.x * attackSpeed, rb.velocity.y); // Usar Rigidbody2D para mover el ratón, manteniendo Y igual
+        Vector2 direction = (target.transform.position - transform.position).normalized;
+        rb.velocity = direction * attackSpeed; // Usar Rigidbody2D para mover el ratón
 
         // Verificar si ha alcanzado al monstruo
         if (Vector3.Distance(transform.position, target.transform.position) < distanciaMinima)
