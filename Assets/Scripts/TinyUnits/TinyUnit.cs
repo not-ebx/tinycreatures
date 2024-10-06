@@ -1,4 +1,5 @@
 using Modifiers;
+using UnityEditor.Animations;
 using UnityEngine;
 
 namespace TinyUnits
@@ -8,6 +9,8 @@ namespace TinyUnits
     {
         public string unitName;
         [TextArea(3, 10)] public string description;
+        [Tooltip("Type of unit, used to determine the walking distance to check for enemies")]
+        [SerializeField] public TinyUnitType unitType;
         [Tooltip("Base cost, will be used to calculate upgrades")]
         public int unitBaseCost;
         [Tooltip("Unit Cost multiplier, will be used to calculate upgrades using an EXPONENTIAL function")]

@@ -1,3 +1,4 @@
+using Common;
 using Modifiers;
 using UnityEngine;
 
@@ -10,8 +11,12 @@ namespace Enemies
         [TextArea(3, 10)] public string description;
         public EnemyType enemyType;
         public int baseReward = 100;
+
+        public AudioClip deathSound;
+        public AudioClip damageSound; 
         
         [SerializeField] public Sprite enemySprite;
+        [SerializeField] public EntityAnimations animations;
         [SerializeField] public EntityDetails stats;
     }
 }

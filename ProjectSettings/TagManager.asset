@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Monster
+  - Enemy
+  - CurrentEnemy
   layers:
   - Default
   - TransparentFX
@@ -12,8 +14,8 @@ TagManager:
   - Rat
   - Water
   - UI
-  - 
-  - 
+  - Enemy
+  - MainEnemySpawnPoint
   - 
   - 
   - 
@@ -41,4 +43,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Rat
+    uniqueID: 3408259385
+    locked: 0
+  - name: MainEnemySpawnPoint
+    uniqueID: 1654586947
+    locked: 0
+  - name: Enemy
+    uniqueID: 214730901
+    locked: 0
+  - name: UI
+    uniqueID: 3506829433
     locked: 0
