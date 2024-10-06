@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements">
+    <ui:VisualElement name="itemContainer" class="item-entry" style="flex-direction: row; padding: 10px;">
+        <ui:Image name="itemIcon" style="width: 64px; height: 64px; margin-right: 10px;" />
+        <ui:VisualElement style="flex-direction: column;">
+            <ui:Label name="itemName" style="font-size: 16px; font-weight: bold;" />
+            <ui:Label name="itemDescription" style="font-size: 12px;" />
+            <ui:Label name="itemPrice" style="font-size: 14px; color: green;" />
+            <ui:Button name="purchaseButton" text="Purchase" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

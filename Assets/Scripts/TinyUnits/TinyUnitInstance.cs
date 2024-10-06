@@ -37,11 +37,11 @@ namespace TinyUnits
             switch (Unit.unitType)
             {
                 case TinyUnitType.Melee:
-                    return 4f;
+                    return 1f;
                 case TinyUnitType.Range:
-                    return 10f;
-                default:
                     return 4f;
+                default:
+                    return 1f;
             }
         }
         
